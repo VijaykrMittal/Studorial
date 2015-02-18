@@ -36,7 +36,7 @@ app.quiz = (function(){
             var data = $(e.target).data();
             console.log(data);
             
-            navigator.notification.confirm("1. Each question carry 1 mark, no negative marks.\n2. Test will be submitted automatically if the time expired.\n3. Click the 'Submit Test' button given in the bottom of this page to Submit your answers. ",function(confirm){
+            navigator.notification.confirm("1. Each question carry 1 mark, no negative marks.\n2. Test will be submitted automatically if the time expired.\n3. Click the 'Submit Test' button given in the bottom of test page to Submit your answers. ",function(confirm){
                 if(confirm === true || confirm === 1)
                 {
                     alert("Start");

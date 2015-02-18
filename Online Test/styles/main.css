@@ -1,0 +1,11 @@
+body {
+}
+
+ .km-setting:after{content: "\e077";font-size:20px;}
+ .nvbar {border-bottom:2px solid #CCC !important}
+
+.quizTxt{color:#427AD4;}
+
+
+.km-flat .km-group-title {height: 48px !important;}
+#drawerList li span{line-height:60px !important;font-size: 20px !important;}

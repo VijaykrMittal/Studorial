@@ -1,0 +1,106 @@
+<div data-role="view" data-layout="home-layout" data-title="Studorial" data-model="app.home" data-show="app.home.show">
+    
+</div>
+
+<!--Web view-->
+<div data-role="view" id="web-view">
+    Web view
+</div>
+
+<!--Programming view-->
+<div data-role="view" id="program-view">
+    programming view
+</div>
+
+<!--networking view-->
+<div data-role="view" id="network-view">
+    network view
+</div>
+
+<!--design view-->
+<div data-role="view" id="design-view">
+    design view
+</div>
+
+<!--testing view-->
+<div data-role="view" id="test-view">
+    testing view
+</div>
+
+<!------------------------------------------------------------APPTITUDE QUIZ VIEW START---------------------------------------------------------------------------->
+
+    <!--Apptitude quiz view-->
+    <div data-role="view" id="app-quiz" data-layout="quiz-layout" data-title="Apptitude Test" data-model="app.quiz" data-init="app.quiz.init">
+        <div data-role="content">
+            <ul data-template="customListViewTemplate" data-bind="source:quizSource" data-role="listview"></ul>
+        </div>
+    </div>
+
+    <!--Apptitude Quiz template create-->
+    <script type="text/x-kendo-template" id="customListViewTemplate">
+        <h3 class="quizTxt"><img class="item-photo" src="${url}" />&nbsp;&nbsp;<a data-id="${id}" data-bind="click:quizStartRequest" >${quiz}</a></h3>
+        <p style="font-size:13px;margin: 0% 13%">Number of Question : ${question}&nbsp; |&nbsp; Time : ${time} min</p>
+    </script>
+
+<!------------------------------------------------------------APPTITUDE QUIZ VIEW STOP---------------------------------------------------------------------------->
+
+
+<!--programming quiz view-->
+<div data-role="view" id="pro-quiz">
+    programming quiz view
+</div>
+
+<!--designing quiz view-->
+<div data-role="view" id="des-quiz">
+    designing quiz view
+</div>
+
+<!--Drawer-->
+<div data-role="drawer" id="drawer-list" data-swipe-to-open="false" data-swipe-to-open-views='["web-view","program-view","network-view","design-view","test-view","app-quiz","pro-quiz","des-quiz"]' data-model="app.drawer">
+    <ul data-role="listview" id="drawerList" data-type="group"> 
+        <li class="myText"><span>Tutorial</span>
+            <ul>
+                <li><a href="#web-view">Web</a></li>
+                <li><a href="#program-view">Programming</a></li>
+                <li><a href="#network-view">Networking</a></li>
+                <li><a href="#design-view">Designing</a></li>
+                <li><a href="#test-view">Testing</a></li>
+            </ul>
+        </li>
+         <li><span>Quiz</span>
+            <ul>
+                <li><a href="#app-quiz">Apptitude</a></li>
+                <li><a href="#pro-quiz">Programming</a></li>
+                <li><a href="#des-quiz">Designing</a></li>
+            </ul>
+        </li>
+        <li><span>Setting</span>
+            <ul>
+                <li>My Profile</li>
+                <li>Feedback</li>
+                <li>Help</li>
+                <li class="logpad">Log Out</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--Home View Layout-->
+<section data-role="layout" data-id="home-layout">
+    <header data-role="header">
+        <div data-role="navbar" class="nvbar">
+            <a data-role="button" href="#drawer-list" data-rel="drawer" data-icon="setting" data-align="left"></a>
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+</section>
+
+<!--Quiz Layout-->
+<section data-role="layout" data-id="quiz-layout">
+    <header data-role="header">
+        <div data-role="navbar">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+</section>

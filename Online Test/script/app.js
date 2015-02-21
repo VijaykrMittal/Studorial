@@ -12,6 +12,10 @@ var app = (function(win){
             console.log("landscape by resize");
             $('#drawer-list').css("width","600px");
         }*/
+        
+        setTimeout(function() {
+            navigator.splashscreen.hide();
+        }, 4000);
     }
     
     document.addEventListener("deviceready",onDeviceReady,false);
